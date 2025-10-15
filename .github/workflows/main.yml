@@ -12,10 +12,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
     
-      - name: Set up Python 3.14
+      - name: Set up Python 3.11
         uses: actions/setup-python@v2
         with:
-          python-version: 3.14.0
+          python-version: 3.11.0
       - name: Set timezone
         run: |
           cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
@@ -25,4 +25,4 @@ jobs:
           pip3 install -r requirements.txt
       - name: weixin
         run: |
-          python main.py
+          python3 main.py
